@@ -10,13 +10,13 @@ type State = {
   clockName: string;
 };
 
-const DEFOULT_CLOCK_NAME = 'Clock-0';
+const DEFAULT_CLOCK_NAME = 'Clock-0';
 
 export class App extends React.Component<Props, State> {
   state: State = {
     isClockShown: true,
     today: new Date(),
-    clockName: DEFOULT_CLOCK_NAME,
+    clockName: DEFAULT_CLOCK_NAME,
   };
 
   clockIntervalId = 0;
@@ -31,7 +31,7 @@ export class App extends React.Component<Props, State> {
 
   handleDocumentRightClick = (event: MouseEvent) => {
     event.preventDefault();
-    this.setState({ isClockShown: false, clockName: DEFOULT_CLOCK_NAME });
+    this.setState({ isClockShown: false, clockName: DEFAULT_CLOCK_NAME });
   };
 
   handleDocumentClick = () => {
